@@ -1,32 +1,31 @@
 #pragma once
 
+#include <string>
+using namespace std;
+
 namespace GITCGtool
 {
 namespace GITCGcore
 {
 
-enum Invoked_type {
-    
-};
-
-class Invoked
+class Code
 {
 private:
     /* data */
 public:
-    Invoked(/* args */);
-    ~Invoked();
+    Code(/* args */);
+    ~Code();
 };
 
-Invoked::Invoked(/* args */)
+Code::Code(/* args */)
 {
 }
 
-Invoked::~Invoked()
+Code::~Code()
 {
 }
 
+    
 
 } // namespace GITCGcore
-
 } // namespace GITCGtool

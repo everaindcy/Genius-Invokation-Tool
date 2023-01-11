@@ -1,7 +1,6 @@
 #pragma once
 
 #include "GITCGcore/code.h"
-#include "GITCGcore/enum.h"
 
 #include <string>
 #include <vector>
@@ -12,26 +11,31 @@ namespace GITCGtool
 namespace GITCGcore
 {
 
-class Card
+enum Summon_type {
+    
+};
+
+class Summon
 {
 private:
     string name;
-    vector<Color_consume> color;
+    vector<int> data; // 各种数据
     Code code;
 
 public:
-    Card(/* args */);
-    ~Card();
+    Summon(/* args */);
+    ~Summon();
 };
 
-Card::Card(/* args */)
+Summon::Summon(/* args */)
 {
 }
 
-Card::~Card()
+Summon::~Summon()
 {
 }
-    
+
 
 } // namespace GITCGcore
+
 } // namespace GITCGtool

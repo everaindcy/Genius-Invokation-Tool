@@ -1,7 +1,7 @@
 #pragma once
 
-#include "GITCGcore/code.h"
 #include "GITCGcore/enum.h"
+#include "GITCGcore/code.h"
 
 #include <string>
 #include <vector>
@@ -12,25 +12,35 @@ namespace GITCGtool
 namespace GITCGcore
 {
 
-class Card
+enum SkillType {
+    NormalAttack,
+    ElementalSkill,
+    ElementalBurst,
+    Talent,
+    Others,
+};
+
+class Skill
 {
 private:
     string name;
+    SkillType type;
     vector<Color_consume> color;
     Code code;
 
 public:
-    Card(/* args */);
-    ~Card();
+    Skill(/* args */);
+    ~Skill();
 };
 
-Card::Card(/* args */)
+Skill::Skill(/* args */)
 {
 }
 
-Card::~Card()
+Skill::~Skill()
 {
 }
+
     
 
 } // namespace GITCGcore
