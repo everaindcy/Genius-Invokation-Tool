@@ -11,20 +11,33 @@ namespace GITCGtool
 namespace GITCGcore
 {
 
-enum Summon_type {
-    
+enum class Summon_type {
+    Shield,  // 护盾
+    Others,
 };
 
 class Summon
 {
 private:
+    int index;
     string name;
+    Summon_type type;
+
     vector<int> data; // 各种数据
-    Code code;
+
+    Code code_initialize;
+    Code code_run;
+    Code code_death;
 
 public:
     Summon(/* args */);
     ~Summon();
+
+    int index();
+    string name();
+    Summon_type type();
+
+    int& data_at(int);
 };
 
 Summon::Summon(/* args */)

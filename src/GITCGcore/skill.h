@@ -12,7 +12,7 @@ namespace GITCGtool
 namespace GITCGcore
 {
 
-enum SkillType {
+enum class SkillType {
     NormalAttack,
     ElementalSkill,
     ElementalBurst,
@@ -23,14 +23,23 @@ enum SkillType {
 class Skill
 {
 private:
+    int index;
     string name;
     SkillType type;
-    vector<Color_consume> color;
-    Code code;
+
+    vector<Color_cost> cost;
+
+    Code code_run;
 
 public:
     Skill(/* args */);
     ~Skill();
+
+    int index();
+    string name();
+    SkillType type();
+
+    vector<Color_cost> cost();
 };
 
 Skill::Skill(/* args */)

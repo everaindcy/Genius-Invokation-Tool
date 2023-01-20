@@ -5,22 +5,10 @@ namespace GITCGtool
 namespace GITCGcore
 {
 
-
-enum TriggerType {
-    RoundBegin,
-    RoundEnd,
-    NormalAttack,
-    ElementalSkill,
-    ElementalBurst,
-    Damage,
-    ChangeCharacter,
-    CharacterDie,
-};
-
 class Trigger
 {
 private:
-    TriggerType type;
+    // TriggerType type;
     
 public:
     Trigger(/* args */);
