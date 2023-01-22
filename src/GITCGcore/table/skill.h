@@ -1,7 +1,7 @@
 #pragma once
 
-#include "GITCGcore/enum.h"
-#include "GITCGcore/code.h"
+#include "enum.h"
+#include "code.h"
 
 #include <string>
 #include <vector>
@@ -35,11 +35,11 @@ public:
     Skill(/* args */);
     ~Skill();
 
-    int index();
-    string name();
-    SkillType type();
+    int get_index();
+    string get_name();
+    SkillType get_type();
 
-    vector<Color_cost> cost();
+    vector<Color_cost> get_cost();
 };
 
 Skill::Skill(/* args */)

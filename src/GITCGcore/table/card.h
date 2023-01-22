@@ -1,7 +1,7 @@
 #pragma once
 
-#include "GITCGcore/code.h"
-#include "GITCGcore/enum.h"
+#include "code.h"
+#include "enum.h"
 
 #include <string>
 #include <vector>
@@ -55,6 +55,8 @@ private:
 public:
     Card(/* args */);
     ~Card();
+
+    bool operator < (const Card &rhs) const {return index < rhs.index;}
 };
 
 Card::Card(/* args */)
